@@ -1,14 +1,10 @@
-// Please refrain from tampering with the setup code provided here,
-// as the index.html and test files rely on this setup to work properly.
-// Only add code (e.g., helper methods, variables, etc.) within the scope
-// of the anonymous function on line 6
 
 const substitutionModule = (function () {
     function substitution(input, alphabet, encode = true) {
       let index = 0;  
       let allIndexes = []; 
       while ((index = input.indexOf(' ', index + 1)) > 0) { 
-      allIndexes.push(index); 
+        allIndexes.push(index); 
       } 
       if (!alphabet || alphabet === 0 || alphabet === "") {
         return false; 
@@ -18,7 +14,7 @@ const substitutionModule = (function () {
       }
       for (let i = 0; i < alphabet.length; i++) {
         if ( alphabet.indexOf(alphabet[i]) !== alphabet.lastIndexOf(alphabet[i]) ) {
-          return false; // repeats
+          return false; 
         }
       }
       let alphaLow = alphabet.toLowerCase(); 
@@ -61,11 +57,3 @@ const substitutionModule = (function () {
   })();
   
   module.exports = substitutionModule.substitution;
-  
-  //console.log(substitutionModule.substitution("You are an excellent spy", "xoyqmcgrukswaflnthdjpzibev", true)); //return ; 'elp xhm xf mbymwwmfj dne'
-  console.log(substitutionModule.substitution("y&ii$r&", "$wae&zrdxtfcygvuhbijnokmpl", false)); // "message"; 
-  console.log(substitutionModule.substitution("elp xhm xf mbymwwmfj dne", "xoyqmcgrukswaflnthdjpzibev", false)); // "You are an excellent spy"
-  
-  /*
-  Spaces should be maintained throughout.
-  */

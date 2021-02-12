@@ -1,7 +1,3 @@
-// Please refrain from tampering with the setup code provided here,
-// as the index.html and test files rely on this setup to work properly.
-// Only add code (e.g., helper methods, variables, etc.) within the scope
-// of the anonymous function on line 6
 
 const polybiusModule = (function () {
     const polySquare = [
@@ -44,7 +40,6 @@ const polybiusModule = (function () {
     function polyDecode(input) {
       let inputed = input.split(" ").join(""); 
       let spaceId = input.indexOf(" "); 
-      //console.log(spaceId); 
       let firstNumber = []; 
       let secondNumber = []; 
       let finalDecode = []; 
@@ -81,10 +76,6 @@ const polybiusModule = (function () {
       polybius,
     };
   })();
-  
-  console.log(polybiusModule.polybius("42 1123", false)); // space is in index 2
-  console.log(polybiusModule.polybius("4211 23", false)); // space is in index 4
-  console.log(polybiusModule.polybius("23232323 23", false)); // space is in index 8
   
   module.exports = polybiusModule.polybius;
   
